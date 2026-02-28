@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jess Cornaggia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1c1c1c;
+            --ink-soft: #4a4a4a;
+            --ink-muted: #8a8a8a;
+            --accent: #1e3a5f;
+            --bg: #faf9f6;
+            --card-bg: #ffffff;
+            --rule: #d8d3c8;
+            --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card {
+            background: var(--card-bg);
+            max-width: 520px;
+            width: 100%;
+            padding: 3.5rem 3rem;
+            border: 1px solid var(--rule);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateY(8px);
+            animation: appear 0.6s ease 0.1s forwards;
+        }
+
+        @keyframes appear {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 2.6rem;
+            letter-spacing: 0.01em;
+            line-height: 1.1;
+            color: var(--ink);
+        }
+
+        .title {
+            margin-top: 0.65rem;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--ink-soft);
+            line-height: 1.55;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 1.8rem 0;
+        }
+
+        .contact {
+            font-size: 0.88rem;
+            color: var(--ink-muted);
+            line-height: 1.8;
+        }
+        .contact a {
+            color: var(--ink-soft);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .contact a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .links {
+            margin-top: 1.8rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.85rem 0;
+            text-decoration: none;
+            color: var(--ink);
+            font-size: 0.92rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            border-top: 1px solid var(--rule);
+            transition: color 0.2s, padding-left 0.25s;
+        }
+        .links a:last-child {
+            border-bottom: 1px solid var(--rule);
+        }
+        .links a:hover {
+            color: var(--accent);
+            padding-left: 0.4rem;
+        }
+        .links a .arrow {
+            font-size: 0.8rem;
+            color: var(--ink-muted);
+            transition: transform 0.25s, color 0.2s;
+        }
+        .links a:hover .arrow {
+            transform: translateX(3px);
+            color: var(--accent);
+        }
+
+        @media (max-width: 560px) {
+            body { padding: 1rem; align-items: flex-start; padding-top: 3rem; }
+            .card { padding: 2.2rem 1.8rem; }
+            h1 { font-size: 2.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Jess Cornaggia</h1>
+    <div class="title">
+        Alumni Professor of Finance<br>
+        Smeal College of Business<br>
+        Pennsylvania State University
+    </div>
+
+    <hr>
+
+    <div class="contact">
+        <a href="mailto:jcornaggia@psu.edu">jcornaggia@psu.edu</a><br>
+        University Park, PA 16802
+    </div>
+
+    <div class="links">
+        <a href="Jess_Cornaggia_CV.pdf" target="_blank">
+            Curriculum Vitae <span class="arrow">&#8594;</span>
+        </a>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=518295" target="_blank">
+            SSRN <span class="arrow">&#8594;</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=xJep3mwAAAAJ&hl=en" target="_blank">
+            Google Scholar <span class="arrow">&#8594;</span>
+        </a>
+        <a href="https://directory.smeal.psu.edu/jnc29" target="_blank">
+            Faculty Page <span class="arrow">&#8594;</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

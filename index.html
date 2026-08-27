@@ -49,6 +49,13 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        .portrait {
+            width: 150px;
+            height: auto;
+            border: 1px solid var(--rule);
+            margin-bottom: 1.6rem;
+        }
+
         h1 {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
@@ -89,38 +96,23 @@
         }
 
         .links {
-            margin-top: 1.8rem;
             display: flex;
             flex-direction: column;
         }
 
+        hr.end { margin: 1.8rem 0 0; }
+
         .links a {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.85rem 0;
+            display: block;
+            padding: 0.55rem 0;
             text-decoration: none;
             color: var(--ink);
             font-size: 0.92rem;
             font-weight: 400;
             letter-spacing: 0.01em;
-            border-top: 1px solid var(--rule);
-            transition: color 0.2s, padding-left 0.25s;
-        }
-        .links a:last-child {
-            border-bottom: 1px solid var(--rule);
+            transition: color 0.2s;
         }
         .links a:hover {
-            color: var(--accent);
-            padding-left: 0.4rem;
-        }
-        .links a .arrow {
-            font-size: 0.8rem;
-            color: var(--ink-muted);
-            transition: transform 0.25s, color 0.2s;
-        }
-        .links a:hover .arrow {
-            transform: translateX(3px);
             color: var(--accent);
         }
 
@@ -134,6 +126,7 @@
 <body>
 
 <div class="card">
+    <img class="portrait" src="jess-cornaggia.jpg" alt="Jess Cornaggia">
     <h1>Jess Cornaggia</h1>
     <div class="title">
         Alumni Professor of Finance<br>
@@ -148,20 +141,16 @@
         University Park, PA 16802
     </div>
 
+    <hr>
+
     <div class="links">
-        <a href="Jess_Cornaggia_CV.pdf" target="_blank">
-            Curriculum Vitae <span class="arrow">&#8594;</span>
-        </a>
-        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=518295" target="_blank">
-            SSRN <span class="arrow">&#8594;</span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=xJep3mwAAAAJ&hl=en" target="_blank">
-            Google Scholar <span class="arrow">&#8594;</span>
-        </a>
-        <a href="https://directory.smeal.psu.edu/jnc29" target="_blank">
-            Faculty Page <span class="arrow">&#8594;</span>
-        </a>
+        <a href="Jess_Cornaggia_CV.pdf" target="_blank">Curriculum Vitae</a>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=518295" target="_blank">SSRN</a>
+        <a href="https://scholar.google.com/citations?user=xJep3mwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://directory.smeal.psu.edu/jnc29" target="_blank">Faculty Page</a>
     </div>
+
+    <hr class="end">
 </div>
 
 </body>
